@@ -7,9 +7,9 @@
 import time
 import numpy as np
 
-import matrix_factroization.definitions_factorization as def_fact
-import matrix_factroization.gradient_descent_factorization as gd_fact
-import matrix_factroization.plot_helper as plot_helper
+import matrix_factorization.definitions_factorization as def_fact
+import matrix_factorization.gradient_descent_factorization as gd_fact
+import matrix_factorization.plot_helper as plot_helper
 
 if __name__ == '__main__':
     # Timer
