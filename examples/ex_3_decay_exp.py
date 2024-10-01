@@ -4,7 +4,6 @@
 # Harvard University
 ###################################################################################################
 
-import time
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -91,12 +90,9 @@ if __name__ == '__main__':
         X_0 = np.random.normal(0, 1 / np.sqrt(n), (n, r))
 
         # Perform optimization with gradient flow
-        start = time.time()
         gf_results = gd_fact.gradient_descent_factorization(H, X_0, parameters,
                                                         min_duration=parameters['min_duration'],
                                                         max_duration=parameters['max_duration'])
-        end = time.time()
-        print(f'--> Elapsed time for gradient descent: {(end - start):.2f} seconds')
 
         # Compute loss
         numerical_results = def_fact.compute_loss_factorization(H, H_hat, gf_results['Z_tensor'], n)
